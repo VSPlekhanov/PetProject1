@@ -11,9 +11,22 @@
         <servlet-class>vsplekhanov.servlets.SimpleServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>vsplekhanov.servlets.ErrorServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
         <url-pattern>/app</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>ErrorServlet</servlet-name>
+        <url-pattern>/err</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <location>/err</location>
+    </error-page>
 </web-app>
